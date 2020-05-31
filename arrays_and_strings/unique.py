@@ -40,7 +40,11 @@ def is_unique3(string):
 String = namedtuple("String", ["string", "expected"])
 
 
-@pytest.fixture(scope="module", params=[String("abcde", True), String("abcdea", False)])
+@pytest.fixture(
+    scope="module",
+    params=[String("abcde", True), String("abcdea", False)],
+    ids=lambda s: f"Input: {s.string}, Expected: {s.expected}",
+)
 def string_for_test(request):
     return request.param
 

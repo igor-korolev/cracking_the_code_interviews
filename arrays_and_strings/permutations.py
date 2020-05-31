@@ -45,13 +45,14 @@ Strings = namedtuple("Strings", ["str1", "str2", "expected"])
         Strings("abc", "abd", False),
         Strings("abcc", "abbc", False),
     ],
+    ids=lambda s: f"Input: ({s.str1}, {s.str2}), Expected: {s.expected}",
 )
 def strings(request):
     return request.param
 
 
 @pytest.mark.parametrize("func", [is_perm1, is_perm2, is_perm3])
-def test_is_unique(func, strings):
+def test_is_permutation(func, strings):
     result = func(strings.str1, strings.str2)
     assert result is strings.expected, (
         f"{func.__name__} with '{strings.str1}' and '{strings.str2}' as input returned {result}, "
