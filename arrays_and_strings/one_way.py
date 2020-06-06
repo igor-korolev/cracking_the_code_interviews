@@ -82,7 +82,7 @@ Strings = namedtuple("Strings", ["original", "edited", "expected"])
         Strings("pale", "bake", False),
         Strings("pales", "pal", False),  # orig > edited
         Strings("pale", "paresis", False),  # orig < edited
-        Strings("apple", "aple", True),  # orig < edited
+        Strings("apple", "aple", True),
         Strings("poool", "pppol", False),
         Strings("poool", "ppolop", False),
     ],
