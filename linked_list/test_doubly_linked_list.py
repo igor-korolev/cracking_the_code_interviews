@@ -96,23 +96,5 @@ def test_raises_when_remove_unknown_node(doubly_llist):
 
 def test_raises_when_remove_from_empty_list():
     with pytest.raises(ValueError) as err:
-        LinkedList().remove_node("some-node")
+        DoublyLinkedList().remove_node("some-node")
         assert "List is empty!" in str(err), "Exception is expected about empty list"
-
-
-# lld = DoublyLinkedList()
-# lld.generate_nodes("abcd")
-# print(lld)
-# lld.add_to_end(Node("e"))
-# print(lld)
-# print(lld.head, lld.head.next_node, lld.head.prev_node)
-# for e in lld:
-#     print(e, e.next_node, e.prev_node)
-#
-# lld.remove_node("b")
-# print("delete:", lld)
-# for e in lld:
-#     print(e, e.next_node, e.prev_node)
-#
-# lld.add_to_beginning(Node("aaa"))
-# print(lld)
