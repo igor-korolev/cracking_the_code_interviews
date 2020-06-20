@@ -1,4 +1,4 @@
-from .linked_list import Node, DoublyLinkedList
+from linked_list.linked_list import Node, DoublyLinkedList
 
 import pytest
 
@@ -51,7 +51,7 @@ def test_remove_node(doubly_llist):
 
 
 def test_add_to_end_when_head_is_none():
-    llist = LinkedList()
+    llist = DoublyLinkedList()
     appended_node = Node("a")
     llist.add_to_end(appended_node)
     assert llist.head == appended_node, (
@@ -63,7 +63,7 @@ def test_add_to_end_when_head_is_none():
 
 
 def test_add_to_beginning_when_head_is_none():
-    llist = LinkedList()
+    llist = DoublyLinkedList()
     inserted_node = Node("a")
     llist.add_to_beginning(inserted_node)
     assert llist.head == inserted_node, (
