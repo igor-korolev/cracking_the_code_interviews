@@ -1,4 +1,4 @@
-from linked_list.linked_list import Node, DoublyLinkedList
+from linked_list.ln_list import Node, DoublyLinkedList
 
 import pytest
 

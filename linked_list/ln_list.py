@@ -15,7 +15,7 @@ class Node:
         self.prev_node = prev_node
 
     def __repr__(self):
-        return self.data
+        return str(self.data)
 
 
 class LinkedList:

@@ -8,7 +8,7 @@ from collections import namedtuple
 
 import pytest
 
-from linked_list.linked_list import Node, LinkedList
+from linked_list.ln_list import Node, LinkedList
 
 
 def delete_middle_node(node):
@@ -27,10 +27,7 @@ LListData = namedtuple("LListData", ["begin_nodes", "middle", "end_nodes", "expe
 
 @pytest.fixture(
     scope="module",
-    params=[
-        LListData("ab", "c", "de", "abde"),
-        LListData("ab", "c", "", "abc"),
-    ],
+    params=[LListData("ab", "c", "de", "abde"), LListData("ab", "c", "", "abc")],
     ids=lambda l: f"Input: {l.begin_nodes}-{l.middle}, Expected: {l.expected}",
 )
 def data_for_test(request):

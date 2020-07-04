@@ -1,7 +1,7 @@
 # Remove Dups: Write code to remove duplicates from an unsorted linked list. FOLLOW UP
 # How would you solve this problem if a temporary buffer is not allowed?
 
-from linked_list.linked_list import LinkedList
+from linked_list.ln_list import LinkedList
 
 import pytest
 
@@ -63,7 +63,7 @@ def llist_data(request):
 
 
 @pytest.mark.parametrize("func", [remove_dups, remove_dups_without_extra_space])
-def test_func_name(func, llist_data):
+def test_remove_dups(func, llist_data):
     ll, expected = llist_data
     result = "".join(n.data for n in func(ll))
     assert result == expected, (

@@ -5,7 +5,7 @@ from collections import namedtuple
 
 import pytest
 
-from linked_list.linked_list import LinkedList
+from linked_list.ln_list import LinkedList
 
 
 def get_kth_to_the_last(llist, k):
