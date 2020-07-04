@@ -80,10 +80,6 @@ def do_partition2(llist, partition):
     return llist
 
 
-ll = LinkedList()
-ll.generate_nodes([3, 5, 8, 5, 10, 2, 1])
-do_partition2(ll, 5)
-
 # Testing:
 
 LlistData = namedtuple("LlistData", ["llist", "pivot"])
