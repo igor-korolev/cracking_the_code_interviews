@@ -48,6 +48,14 @@ class LinkedList:
             yield node
             node = node.next_node
 
+    def __len__(self):
+        ll_len = 0
+        node = self.head
+        while node is not None:
+            ll_len += 1
+            node = node.next_node
+        return ll_len
+
     def add_to_end(self, node):
         """
         Appends node to the end of a linked list.

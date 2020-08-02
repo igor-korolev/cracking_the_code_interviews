@@ -63,7 +63,7 @@ def llist(request):
 
 
 @pytest.mark.parametrize("func", [get_kth_to_the_last, get_kth_to_last2])
-def test_func_name(func, llist):
+def test_kth_to_the_last(func, llist):
     ll = LinkedList()
     ll.generate_nodes(llist.input_list)
 
